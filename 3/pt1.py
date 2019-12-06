@@ -23,6 +23,6 @@ def get_coords(instructions):
 
 with open('input.txt') as inputfile:
   lines = [get_coords(line.split(',')) for line in inputfile]
-  crossings = lines[0].intersection(lines[1])
+  crossings = lines[0]&lines[1]
   result = min([get_manhattan_distance(crossing) for crossing in crossings])
   print("RESULT ", result)
